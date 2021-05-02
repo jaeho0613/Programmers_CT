@@ -1,4 +1,4 @@
-package Level1;
+package Level1.D0430;
 
 public class 신규아이디추천 {
 

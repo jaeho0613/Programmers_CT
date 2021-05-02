@@ -1,4 +1,4 @@
-package Level1;
+package Level1.D0430;
 
 public class 가운데글자가져오기 {
 	public static void main(String[] args) {

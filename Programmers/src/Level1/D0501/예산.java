@@ -1,11 +1,11 @@
-package Level1;
+package Level1.D0501;
 
 import java.util.Arrays;
 
 public class 예산 {
 
 	public static void main(String[] args) {
-		Solution_asd st = new Solution_asd();
+		Solution_01 st = new Solution_01();
 //		int[] d = { 1, 3, 2, 5, 4 };
 //		int budget = 9;
 //		int[] d = { 2, 2, 3, 3 };
@@ -21,7 +21,7 @@ public class 예산 {
 
 }
 
-class Solution_asd {
+class Solution_01 {
 	public int solution(int[] d, int budget) {
 
 		Arrays.sort(d);

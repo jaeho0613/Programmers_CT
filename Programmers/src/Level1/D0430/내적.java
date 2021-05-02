@@ -1,4 +1,4 @@
-package Level1;
+package Level1.D0430;
 
 public class 내적 {
 	public static void main(String[] args) {
