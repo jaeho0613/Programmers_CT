@@ -2,6 +2,7 @@ package Level2.D0504;
 
 import java.math.BigInteger;
 
+// 유클리트 호제법
 public class 멀쩡한사각형 {
 
 	public static void main(String[] args) {
