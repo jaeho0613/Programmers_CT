@@ -21,7 +21,6 @@ public class 여행경로 {
 }
 
 class Solution_04 {
-
 	List<String> answers;
 	boolean[] visited;
 
@@ -33,22 +32,53 @@ class Solution_04 {
 		dfs(0, "ICN", "ICN", tickets);
 		Collections.sort(answers);
 		String[] answer = answers.get(0).split(" ");
-
 		return answer;
 	}
 
-	private void dfs(int count, String current, String answer, String[][] tickets) {
+	private void dfs(int count, String currentPath, String answer, String[][] tickets) {
 		if(count == tickets.length) {
 			answers.add(answer);
 			return;
 		}
-
+		
 		for (int i = 0; i < tickets.length; i++) {
-			if (!visited[i] && tickets[i][0].equals(current)) {
+			if(tickets[i][0].equals(currentPath) && !visited[i]) {
 				visited[i] = true;
 				dfs(count + 1, tickets[i][1], answer + " " + tickets[i][1], tickets);
 				visited[i] = false;
-			}
+			}				
 		}
 	}
 }
+
+//class Solution_04 {
+//
+//	List<String> answers;
+//	boolean[] visited;
+//
+//	public String[] solution(String[][] tickets) {
+//
+//		answers = new ArrayList<>();
+//		visited = new boolean[tickets.length];
+//
+//		dfs(0, "ICN", "ICN", tickets);
+//		Collections.sort(answers);
+//		String[] answer = answers.get(0).split(" ");
+//
+//		return answer;
+//	}
+//
+//	private void dfs(int count, String current, String answer, String[][] tickets) {
+//		if(count == tickets.length) {
+//			answers.add(answer);
+//			return;
+//		}
+//
+//		for (int i = 0; i < tickets.length; i++) {
+//			if (!visited[i] && tickets[i][0].equals(current)) {
+//				visited[i] = true;
+//				dfs(count + 1, tickets[i][1], answer + " " + tickets[i][1], tickets);
+//				visited[i] = false;
+//			}
+//		}
+//	}
